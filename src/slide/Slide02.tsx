@@ -1,102 +1,46 @@
-import React from "react";
-import { 
-  Slide,
-  Appear,
-  Heading,
-  FlexBox,
-  UnorderedList,
-  ListItem,
-  CodeSpan
- } from "spectacle";
+import React from 'react';
+import { Slide, Heading, Stepper, Box } from 'spectacle';
 
 export const Slide02 = () => {
   return (
+    // 💡 1. <Slide>가 반드시 최상단에 위치해야 합니다.
     <Slide
-      transition={{
-        from: {
-          transform: 'scale(0.5) rotate(45deg)',
-          opacity: 0
-        },
-        enter: {
-          transform: 'scale(1) rotate(0)',
-          opacity: 1
-        },
-        leave: {
-          transform: 'scale(0.2) rotate(315deg)',
-          opacity: 0
-        }
-      }}
       backgroundColor="tertiary"
-      backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/main/src/beau.jpg?raw=true)"
-      backgroundOpacity={0.5}
+      backgroundImage="url(/리바이어던.webp)"
+      backgroundPosition="top center"
     >
-      <Appear>
-        <Heading
-          fontSize="80px"
-          color="primary"
-          style={{
-            position: 'absolute',
-            top: '20px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            zIndex: 10
-          }}
-        >
-          <i>발표 목차</i>
-        </Heading>
-      </Appear>
+      {/* 💡 2. <Slide> 내부에 <Stepper>를 배치합니다. */}
+      <Stepper values={[0, 1]}>
+        {(value) => {
+          const isDimmed = value === 1;
 
-      <FlexBox
-        height="100%"
-        justifyContent="center"
-        alignItems="center"
-        paddingTop="80px"
-      >
-        <Appear>
-          <UnorderedList
-            border="2px solid #1d1d1f"
-            borderRadius="12px"
-            padding="20px 40px"
-            fontWeight="bold"
-          >
-            <Appear>
-              <ListItem>
-                <CodeSpan>서론 및 쟁점 소개</CodeSpan>
-              </ListItem>
-            </Appear>
-
-            <Appear>
-              <ListItem>
-                <CodeSpan>심판대상 조항 및 헌법적 배경</CodeSpan>
-              </ListItem>
-            </Appear>
-
-            <Appear>
-              <ListItem>
-                <CodeSpan>헌법 제33조 제1항 위반 여부</CodeSpan>
-              </ListItem>
-            </Appear>
-
-            <Appear>
-              <ListItem>
-                <CodeSpan>평등원칙 위반 여부</CodeSpan>
-              </ListItem>
-            </Appear>
-
-            <Appear>
-              <ListItem>
-                <CodeSpan>반대의견의 논리</CodeSpan>
-              </ListItem>
-            </Appear>
-
-            <Appear>
-              <ListItem>
-                <CodeSpan>반대논리 재반박</CodeSpan>
-              </ListItem>
-            </Appear>
-          </UnorderedList>
-        </Appear>
-      </FlexBox>
+          return (
+            <Box
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                // 배경 이미지를 어둡게 해주는 오버레이 레이어 효과
+                backgroundColor: isDimmed ? 'rgba(245, 245, 247, 0.75)' : 'transparent',
+                transition: 'background-color 0.8s ease',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'flex-start',
+                paddingTop: '40px'
+              }}
+            >
+              {/* 💡 두 번째 단계(클릭)에서 목차가 등장합니다 */}
+              {isDimmed && (
+                <Heading fontSize="80px" color="primary">
+                  <i>발표 목차</i>
+                </Heading>
+              )}
+            </Box>
+          );
+        }}
+      </Stepper>
     </Slide>
   );
 };

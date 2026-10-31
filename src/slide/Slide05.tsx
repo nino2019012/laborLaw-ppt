@@ -1,15 +1,14 @@
 import React from "react";
 import { Slide, Heading, FlexBox, Grid, Text, Appear } from "spectacle";
 import { CustomCard } from "../components/CustomCard";
+import { LeviathanSlide } from "../components/LeviathanSlide";
 
 export const Slide05 = () => {
   return (
-    <Slide backgroundColor="tertiary">
-      <Heading margin="0 0 40px 0">
+    <LeviathanSlide>
+      <Heading margin="0 0 40px 0" color="primary">
         <span>소극적 단결권의 침해 문제</span>
       </Heading>
-
-      <FlexBox>
         <Grid gridTemplateColumns="1fr" width="85%" style={{ position: 'relative', height: '380px' }}>
           
           {/* 1단계: 적극적 vs 소극적 단결권 비교 (priority={0}) */}
@@ -115,7 +114,6 @@ export const Slide05 = () => {
           </Appear>
 
         </Grid>
-      </FlexBox>
-    </Slide>
+    </LeviathanSlide>
   );
 };

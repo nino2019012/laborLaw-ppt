@@ -1,12 +1,12 @@
 import React, { Children } from 'react';
 import { createRoot } from 'react-dom/client';
-import { CustomCard } from './components/CustomCard';
 
 import { Slide01 } from './slide/Slide01';
 import { Slide02 } from './slide/Slide02';
 import { Slide03 } from './slide/Slide03';
 import { Slide04 } from './slide/Slide04';
 import { Slide05 } from './slide/Slide05';
+import { Slide06 } from './slide/Slide06';
 
 import { Deck, DefaultTemplate} from 'spectacle';
 
@@ -38,6 +38,7 @@ export default function Presentation() {
       <Slide03 />
       <Slide04 />
       <Slide05 />
+      <Slide06 />
     </Deck>
   );
 };

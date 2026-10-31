@@ -1,13 +1,12 @@
 import React from "react";
 import { Slide, Heading, FlexBox, Grid, Box, Text, Appear } from "spectacle";
 import { CustomCard } from "../components/CustomCard";
+import { LeviathanSlide } from "../components/LeviathanSlide";
 
 export const Slide04 = () => {
   return (
-    <Slide backgroundColor="tertiary">
-      <Heading>노동조합 및 노동관계조정법 제 81조</Heading>
-
-      <FlexBox>
+    <LeviathanSlide>
+      <Heading color="primary">노동조합 및 노동관계조정법 제 81조</Heading>
         <Grid gridTemplateColumns="1fr 1fr" gridGap={40} width="85%">
           {/* [좌측 카드] 원칙 ➡️ 본질적 의미(단결권) */}
           <CustomCard
@@ -89,7 +88,6 @@ export const Slide04 = () => {
             </Appear>
           </CustomCard>
         </Grid>
-      </FlexBox>
-    </Slide>
+    </LeviathanSlide>
   );
 };
