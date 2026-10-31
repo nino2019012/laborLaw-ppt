@@ -13,3 +13,5 @@ Made with ❤️ and [Spectacle](https://github.com/FormidableLabs/spectacle/).
 To build your presentation for a production deploy, run `yarn build` (or `npm build` or `pnpm build`).
 
 The build artifacts will be placed in the `dist` directory. If you'd like to change this location, edit `build.outDir` in `vite.config.ts`.
+
+This is a url on vercel: https://labor-law-ppt.vercel.app
