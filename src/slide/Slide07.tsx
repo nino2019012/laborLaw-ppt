@@ -26,7 +26,7 @@ export const Slide07 = () => {
           height="500px"
           style={{ margin: '0 auto' }}
         >
-          {/* ==================== 좌측: 적극적 단결권 (우위) ==================== */}
+          {/* ==================== 좌측: 적극적 단결권 (우위 / 특별법적 지위) ==================== */}
           <div 
             onClick={() => setShowLeftDetail(!showLeftDetail)}
             onMouseEnter={() => setIsLeftHovered(true)}
@@ -68,7 +68,7 @@ export const Slide07 = () => {
                 </Text>
               </CustomCard>
             ) : (
-              /* [좌측 뒷면] 파스텔 블루 (#eef2f7) 배경 */
+              /* [좌측 뒷면] 특별법적 지위 & 사회권적 성격 */
               <CustomCard style={{
                 width: '100%',
                 height: '100%',
@@ -78,22 +78,36 @@ export const Slide07 = () => {
                 alignItems: 'center',
                 padding: '32px 24px',
                 boxSizing: 'border-box',
-                backgroundColor: '#eef2f7', // 💡 연한 파란색 적용
-               
+                backgroundColor: '#eef2f7'
               }}>
-                <Text fontSize="28px" color="#1d3557" margin="0 0 16px 0" style={{ lineHeight: 1.6, textAlign: 'center', wordBreak: 'keep-all' }}>
-                  <strong>'생존권적 기본권'</strong>으로서<br/> 노조의 결성·유지를 위한 단결강제를 최우선적으로 보호함
+                {/* 💡 특별법 지위 상단 강조 뱃지 */}
+                <span style={{ 
+                  fontSize: '35px', 
+                  fontWeight: 'bold', 
+                  color: '#ffffff', 
+                  backgroundColor: '#1d3557', 
+                  padding: '4px 14px', 
+                  borderRadius: '20px', 
+                  marginBottom: '16px' 
+                }}>
+                  특별법적인 지위
+                </span>
+
+                <Text fontSize="25px" color="#1d3557" margin="0 0 16px 0" style={{ lineHeight: 1.5, textAlign: 'center', wordBreak: 'keep-all' }}>
+                  근로자의 <strong>사회적 보호기능</strong>을 담당하며,<br/>
+                  <strong>사회권적 성격을 띤 자유권</strong>으로서 우선 보호됨
                 </Text>
-                <div style={{ backgroundColor: '#ffffff', border: '1px solid #1d355730', padding: '10px 16px', borderRadius: '8px', width: '100%', boxSizing: 'border-box' }}>
-                  <Text fontSize="20px" color="#1d3557" fontWeight="bold" margin="0" style={{ textAlign: 'center', wordBreak: 'keep-all' }}>
-                    헌재: 소극적 단결권보다 <strong>우월한 지위</strong> 인정
+                
+                <div style={{ backgroundColor: '#ffffff', border: '1px solid #1d355730', padding: '12px 16px', borderRadius: '8px', width: '100%', boxSizing: 'border-box' }}>
+                  <Text fontSize="19px" color="#1d3557" fontWeight="bold" margin="0" style={{ textAlign: 'center', wordBreak: 'keep-all' }}>
+                    헌재: 일반법에 우선하여 <strong>최우선 보호</strong>
                   </Text>
                 </div>
               </CustomCard>
             )}
           </div>
 
-          {/* ==================== 우측: 소극적 단결권 (제한 가능) ==================== */}
+          {/* ==================== 우측: 소극적 단결권 (일반법적 성격) ==================== */}
           <div 
             onClick={() => setShowRightDetail(!showRightDetail)}
             onMouseEnter={() => setIsRightHovered(true)}
@@ -135,7 +149,7 @@ export const Slide07 = () => {
                 </Text>
               </CustomCard>
             ) : (
-              /* [우측 뒷면] 파스텔 레드 (#fdf0f0) 배경 */
+              /* [우측 뒷면] 일반법적 성격 & 보충적 자유권 */
               <CustomCard style={{
                 width: '100%',
                 height: '100%',
@@ -145,17 +159,29 @@ export const Slide07 = () => {
                 alignItems: 'center',
                 padding: '32px 24px',
                 boxSizing: 'border-box',
-                backgroundColor: '#fdf0f0', // 💡 연한 빨간색 적용
-                
+                backgroundColor: '#fdf0f0'
               }}>
-                <Text fontSize="28px" color="#333333" margin="0 0 16px 0" style={{ lineHeight: 1.5, textAlign: 'center', wordBreak: 'keep-all' }}>
-                  근로3권이 아닌<br/>
-                  <strong style={{ color: '#e63946' }}>'일반적 행동자유권 및 결사의 자유'</strong>에<br/>
-                  기초하므로 상대적으로 약한 권리임
+                {/* 💡 일반법 지위 상단 강조 뱃지 */}
+                <span style={{ 
+                  fontSize: '35px', 
+                  fontWeight: 'bold', 
+                  color: '#ffffff', 
+                  backgroundColor: '#e63946', 
+                  padding: '4px 14px', 
+                  borderRadius: '20px', 
+                  marginBottom: '16px' 
+                }}>
+                  일반법적인 보충 지위
+                </span>
+
+                <Text fontSize="25px" color="#333333" margin="0 0 16px 0" style={{ lineHeight: 1.5, textAlign: 'center', wordBreak: 'keep-all' }}>
+                  헌법 제10·21조에 기초한<br/><strong>일반법적인 자유권</strong>이자
+                  <strong> 보충적 자유권</strong>에 불과함
                 </Text>
-                <div style={{ backgroundColor: '#ffffff', border: '1px solid #e6394630', padding: '10px 16px', borderRadius: '8px', width: '100%', boxSizing: 'border-box' }}>
-                  <Text fontSize="20px" color="#e63946" fontWeight="bold" margin="0" style={{ textAlign: 'center', wordBreak: 'keep-all' }}>
-                    헌재: 유니언 샵 보장을 위해 <strong>제한될 수 있음</strong>
+                
+                <div style={{ backgroundColor: '#ffffff', border: '1px solid #e6394630', padding: '12px 16px', borderRadius: '8px', width: '100%', boxSizing: 'border-box' }}>
+                  <Text fontSize="19px" color="#e63946" fontWeight="bold" margin="0" style={{ textAlign: 'center', wordBreak: 'keep-all' }}>
+                    헌재: 특별법적 우위 권리에 의해 <strong>제한 가능</strong>
                   </Text>
                 </div>
               </CustomCard>
