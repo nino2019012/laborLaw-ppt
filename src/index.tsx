@@ -7,6 +7,7 @@ import { Slide03 } from './slide/Slide03';
 import { Slide04 } from './slide/Slide04';
 import { Slide05 } from './slide/Slide05';
 import { Slide06 } from './slide/Slide06';
+import { Slide07 } from './slide/Slide07';
 
 import { Deck, DefaultTemplate} from 'spectacle';
 
@@ -39,6 +40,7 @@ export default function Presentation() {
       <Slide04 />
       <Slide05 />
       <Slide06 />
+      <Slide07 />
     </Deck>
   );
 };

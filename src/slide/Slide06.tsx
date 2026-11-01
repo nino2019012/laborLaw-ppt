@@ -85,7 +85,7 @@ export const Slide06 = () => {
 
                 <Text fontSize="30px" color="secondary" margin="0" style={{ lineHeight: 1.6, wordBreak: 'keep-all' }}>
                   노조에 가입하지 않을 <strong style={{ color: '#e63946' }}>소극적 단결권</strong>은 근로3권이 아닌<br/>
-                  일반적 행동자유권(제10조) 및 결사의 자유(제21조)에 근거함
+                  일반적 행동의 자유(제10조) 및 결사의 자유(제21조)에 근거함
                 </Text>
               </CustomCard>
 
