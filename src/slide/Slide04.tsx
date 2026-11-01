@@ -7,7 +7,14 @@ export const Slide04 = () => {
   return (
     <LeviathanSlide>
       <Heading color="primary">노동조합 및 노동관계조정법 제 81조</Heading>
-        <Grid gridTemplateColumns="1fr 1fr" gridGap={40} width="85%">
+        <Grid 
+          gridTemplateColumns="1fr 1fr"
+          gridGap={40}
+          width="85%"
+          style={{
+            margin: '0 auto'
+          }}
+          >
           {/* [좌측 카드] 원칙 ➡️ 본질적 의미(단결권) */}
           <CustomCard
             flex={1}

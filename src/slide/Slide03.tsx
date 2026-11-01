@@ -2,6 +2,7 @@ import React from "react";
 import { Heading, Grid, Text } from "spectacle";
 import { CustomCard } from "../components/CustomCard";
 import { LeviathanSlide } from "../components/LeviathanSlide";
+import { Margin } from "lucide-react";
 
 export const Slide03 = () => {
   return (
@@ -10,7 +11,14 @@ export const Slide03 = () => {
         <i>유니언 샵 조항</i>
       </Heading>
 
-      <Grid gridTemplateColumns="1fr 1fr" gridGap={40} width="85%">
+      <Grid 
+      gridTemplateColumns="1fr 1fr"
+      gridGap={40}
+      width="85%"
+      style={{
+        margin: '0 auto'
+      }}
+      >
         <CustomCard 
           style={{ 
             height: "300px", 
