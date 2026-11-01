@@ -8,6 +8,10 @@ import { Slide04 } from './slide/Slide04';
 import { Slide05 } from './slide/Slide05';
 import { Slide06 } from './slide/Slide06';
 import { Slide07 } from './slide/Slide07';
+import { Slide08 } from './slide/Slide08';
+import { Slide09 } from './slide/Slide09';
+import { Slide10 } from './slide/Slide10';
+import { Slide11 } from './slide/Slide11';
 
 import { Deck, DefaultTemplate} from 'spectacle';
 
@@ -41,6 +45,10 @@ export default function Presentation() {
       <Slide05 />
       <Slide06 />
       <Slide07 />
+      <Slide08 />
+      <Slide09 />
+      <Slide10 />
+      <Slide11 />
     </Deck>
   );
 };
