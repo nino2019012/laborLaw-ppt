@@ -40,7 +40,7 @@ export const Slide04 = () => {
                   margin="0"
                   style={{ wordBreak: 'keep-all', lineHeight: 1.4 }}
                 >
-                  특정 노조 가입·탈퇴를 채용 조건으로 하는 행위 금지
+                  특정 노조 가입 및 탈퇴를 <br/>채용 조건으로 하는 행위 금지
                 </Text>
               </Box>
             </Appear>
