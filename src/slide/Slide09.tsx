@@ -13,7 +13,7 @@ export const Slide09 = () => {
   return (
     <LeviathanSlide>
       <Heading margin="-10px 0px 40px 0px" fontSize="50px" color="primary">
-        평석 ① : 다수의견 지지 및 재반박
+        평석 ① : 다수의견 지지
       </Heading>
 
       <Appear>
@@ -53,7 +53,7 @@ export const Slide09 = () => {
                 backgroundColor: '#ffffff'
               }}>
                 <Text fontSize="40px" fontWeight="bold" color="#264653" margin="0 0 16px 0" style={{ textAlign: 'center', lineHeight: 1.4, wordBreak: 'keep-all' }}>
-                  "소극적 단결권을 제10조·제21조로 포섭한<br /><span style={{ color: PRIMARY_COLOR }}>헌재 다수의견의 법리는 타당하다</span>"
+                  소극적 단결권을 제10조·제21조로 포섭한<br /><span style={{ color: PRIMARY_COLOR }}>헌재 다수의견의 법리는 타당하다</span>
                 </Text>
 
                 <Text fontSize="25px" color="secondary" margin="0" style={{ textAlign: 'center', lineHeight: 1.5, wordBreak: 'keep-all' }}>

@@ -1,19 +1,14 @@
 import React from 'react';
-import { Slide, Heading, Text, Stepper, Box } from 'spectacle';
+import { Heading, Text, Stepper, Box } from 'spectacle';
+import { LeviathanSlide } from '../components/LeviathanSlide';
 
 export const Slide11 = () => {
   return (
-    <Slide
-      backgroundColor="tertiary"
-      backgroundImage="url(/리바이어던.webp)"
-      backgroundPosition="top center"
-      backgroundSize="cover"
-    >
-      {/* 스텝을 [0, 1]로 두어 초기 상태(0/undefined)와 진입 완료 상태(1)를 명확히 구분합니다 */}
+    <LeviathanSlide>
       <Stepper values={[0, 1]}>
         {(value) => {
-          // value가 1이 아닐 때(즉, 초기 진입 시) 감사합니다 화면 표시
-          // 방향키를 눌러 value가 1이 되면 원본 배경만 표시
+          // 초기 진입 시(value가 1이 아닐 때): 오버레이 + 감사합니다 & Q&A 노출
+          // 방향키 클릭 시(value가 1일 때): 오버레이 및 문구가 사라지고 원본 배경 노출
           const showThanks = value !== 1;
 
           return (
@@ -46,6 +41,6 @@ export const Slide11 = () => {
           );
         }}
       </Stepper>
-    </Slide>
+    </LeviathanSlide>
   );
 };
